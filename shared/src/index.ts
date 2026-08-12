@@ -1,1 +1,1 @@
-export {};
+export * from './generated/graphql.js';

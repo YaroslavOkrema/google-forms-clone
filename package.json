@@ -16,6 +16,7 @@
   "scripts": {
     "predev": "npm run build --workspace=@google-forms/shared",
     "dev": "concurrently --kill-others-on-fail --names shared,client,server \"npm run dev --workspace=@google-forms/shared\" \"npm run dev --workspace=@google-forms/client\" \"npm run dev --workspace=@google-forms/server\"",
+    "codegen": "graphql-codegen --config codegen.ts",
     "build": "npm run build --workspaces",
     "lint": "npm run lint --workspaces",
     "typecheck": "npm run typecheck --workspaces",
@@ -24,6 +25,8 @@
   },
   "devDependencies": {
     "@eslint/js": "^9.33.0",
+    "@graphql-codegen/cli": "^7.2.0",
+    "@graphql-codegen/typescript": "^6.1.0",
     "concurrently": "^9.2.0",
     "eslint": "^9.33.0",
     "eslint-config-prettier": "^10.1.8",

@@ -16,6 +16,7 @@
   ],
   "scripts": {
     "dev": "tsc --watch --preserveWatchOutput",
+    "prebuild": "npm run codegen --prefix ..",
     "build": "tsc",
     "lint": "eslint . --max-warnings=0",
     "typecheck": "tsc --noEmit"

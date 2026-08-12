@@ -1,19 +1,17 @@
-import { createServer } from 'node:http';
+import { ApolloServer } from '@apollo/server';
+import { startStandaloneServer } from '@apollo/server/standalone';
+
+import { typeDefs } from './schema.js';
 
 const DEFAULT_PORT = 4000;
 const port = Number(process.env.PORT ?? DEFAULT_PORT);
 
-const server = createServer((request, response) => {
-  if (request.method === 'GET' && request.url === '/health') {
-    response.writeHead(200, { 'Content-Type': 'application/json' });
-    response.end(JSON.stringify({ status: 'ok' }));
-    return;
-  }
-
-  response.writeHead(404, { 'Content-Type': 'application/json' });
-  response.end(JSON.stringify({ error: 'Not found' }));
+const server = new ApolloServer({
+  typeDefs,
 });
 
-server.listen(port, () => {
-  console.log(`Server is running at http://localhost:${port}`);
+const { url } = await startStandaloneServer(server, {
+  listen: { port },
 });
+
+console.log(`GraphQL server is running at ${new URL('graphql', url)}`);
