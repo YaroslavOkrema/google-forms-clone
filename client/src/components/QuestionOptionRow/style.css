@@ -1,0 +1,81 @@
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  border: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+}
+
+.builder-option-row {
+  display: grid;
+  grid-template-columns: 18px minmax(0, 1fr) 38px;
+  align-items: start;
+  gap: 10px;
+}
+
+.builder-option-marker {
+  width: 12px;
+  height: 12px;
+  margin-top: 17px;
+  border: 2px solid #9aa0a6;
+  border-radius: 50%;
+}
+
+.builder-option-field {
+  min-width: 0;
+}
+
+.builder-option-input {
+  min-height: 44px;
+}
+
+.builder-option-field .builder-field-error {
+  margin-top: 6px;
+}
+
+.builder-icon-button {
+  display: inline-grid;
+  width: 38px;
+  height: 38px;
+  margin-top: 4px;
+  border: 0;
+  border-radius: 50%;
+  cursor: pointer;
+  place-items: center;
+  background: transparent;
+  color: #5f6368;
+  font-size: 1.55rem;
+  line-height: 1;
+}
+
+.builder-icon-button:hover:not(:disabled) {
+  background: #f1f3f4;
+  color: #b3261e;
+}
+
+.builder-icon-button:focus-visible {
+  outline: 3px solid rgb(103 58 183 / 30%);
+  outline-offset: 2px;
+}
+
+.builder-icon-button:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+@media (max-width: 640px) {
+  .builder-option-row {
+    grid-template-columns: 14px minmax(0, 1fr) 38px;
+    gap: 7px;
+  }
+
+  .builder-option-marker {
+    width: 10px;
+    height: 10px;
+    margin-top: 18px;
+  }
+}

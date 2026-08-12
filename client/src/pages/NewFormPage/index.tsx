@@ -4,6 +4,8 @@ import { FormQuestionEditor } from 'src/components/FormQuestionEditor';
 import { ROUTE_PATHS } from 'src/navigation/paths';
 import { useNewFormPage } from 'src/pages/NewFormPage/useNewFormPage';
 
+import './style.css';
+
 export function NewFormPage() {
   const {
     description,

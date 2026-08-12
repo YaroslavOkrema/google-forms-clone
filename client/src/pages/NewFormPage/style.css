@@ -1,0 +1,179 @@
+.builder-page {
+  width: min(100% - 32px, 880px);
+  min-height: 100vh;
+  margin: 0 auto;
+  padding: 40px 0 64px;
+}
+
+.builder-form {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.builder-header,
+.builder-card {
+  border: 1px solid #dadce0;
+  background: #ffffff;
+  box-shadow: 0 1px 3px rgb(60 64 67 / 15%);
+}
+
+.builder-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 32px;
+  border-top: 10px solid #673ab7;
+  border-radius: 10px;
+}
+
+.builder-header h1 {
+  margin: 0;
+  font-size: clamp(2rem, 5vw, 2.75rem);
+  line-height: 1.1;
+}
+
+.builder-header > div > p:last-child {
+  max-width: 580px;
+  margin: 12px 0 0;
+  color: #5f6368;
+  line-height: 1.5;
+}
+
+.builder-back-link {
+  flex: 0 0 auto;
+}
+
+.builder-card {
+  padding: 28px;
+  border-radius: 10px;
+}
+
+.builder-section-heading,
+.builder-questions-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.builder-section-heading,
+.builder-questions-header {
+  align-items: flex-start;
+}
+
+.builder-section-heading {
+  margin-bottom: 26px;
+}
+
+.builder-section-heading h2,
+.builder-questions-header h2 {
+  margin: 4px 0 0;
+  font-size: 1.45rem;
+}
+
+.builder-required-note {
+  flex: 0 0 auto;
+  color: #5f6368;
+  font-size: 0.85rem;
+}
+
+.builder-textarea {
+  min-height: 108px;
+  resize: vertical;
+}
+
+.builder-questions-section {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.builder-questions-header {
+  padding: 8px 2px 0;
+}
+
+.builder-question-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.builder-add-question {
+  align-self: flex-start;
+  gap: 8px;
+}
+
+.builder-add-question > span {
+  font-size: 1.25rem;
+  line-height: 1;
+}
+
+.builder-empty-state {
+  padding: 34px 24px;
+  border: 1px dashed #bdc1c6;
+  border-radius: 10px;
+  background: rgb(255 255 255 / 60%);
+  text-align: center;
+}
+
+.builder-empty-state h3 {
+  margin: 0;
+  font-size: 1.05rem;
+}
+
+.builder-empty-state p {
+  margin: 8px 0 0;
+  color: #5f6368;
+  line-height: 1.5;
+}
+
+.builder-message-validation {
+  border-color: #f9ab00;
+  background: #fff8e1;
+  color: #5f3700;
+}
+
+.builder-save-button {
+  min-width: 132px;
+  gap: 9px;
+}
+
+@media (max-width: 640px) {
+  .builder-page {
+    width: min(100% - 24px, 880px);
+    padding: 24px 0 40px;
+  }
+
+  .builder-form {
+    gap: 16px;
+  }
+
+  .builder-header {
+    align-items: stretch;
+    flex-direction: column;
+    padding: 24px;
+  }
+
+  .builder-back-link {
+    align-self: flex-start;
+  }
+
+  .builder-card {
+    padding: 22px 20px;
+  }
+
+  .builder-section-heading,
+  .builder-questions-header {
+    gap: 12px;
+  }
+
+  .builder-add-question {
+    width: 100%;
+  }
+
+  .builder-save-button {
+    width: 100%;
+  }
+}

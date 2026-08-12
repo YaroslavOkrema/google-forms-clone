@@ -1,0 +1,126 @@
+.fill-question-card {
+  position: relative;
+  min-width: 0;
+  padding: 36px 28px 28px;
+  border: 1px solid #dadce0;
+  border-radius: 10px;
+  margin: 0;
+  overflow: hidden;
+  background: #ffffff;
+  box-shadow: 0 1px 3px rgb(60 64 67 / 15%);
+}
+
+.fill-question-card::before {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 5px;
+  background: #7e57c2;
+  content: '';
+}
+
+.fill-question-card legend {
+  float: left;
+  width: 100%;
+  padding: 0;
+  margin: 0 0 22px;
+}
+
+.fill-question-card legend + * {
+  clear: both;
+}
+
+.fill-question-number,
+.fill-question-title {
+  display: block;
+}
+
+.fill-question-number {
+  margin-bottom: 7px;
+  color: #673ab7;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.fill-question-title {
+  color: #202124;
+  font-size: 1.12rem;
+  font-weight: 600;
+  line-height: 1.45;
+  overflow-wrap: anywhere;
+}
+
+.fill-answer-label {
+  display: block;
+  margin-bottom: 8px;
+  color: #3c4043;
+  font-size: 0.88rem;
+  font-weight: 600;
+}
+
+.fill-date-input {
+  max-width: 280px;
+}
+
+.fill-choice-list {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.fill-choice {
+  display: flex;
+  min-width: 0;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  line-height: 1.45;
+  transition: background-color 150ms ease;
+}
+
+.fill-choice:hover {
+  background: #f7f2ff;
+}
+
+.fill-choice input {
+  width: 18px;
+  height: 18px;
+  flex: 0 0 auto;
+  margin: 1px 0 0;
+  accent-color: #673ab7;
+}
+
+.fill-choice span {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+.fill-question-card:disabled .fill-choice {
+  cursor: not-allowed;
+  color: #80868b;
+}
+
+.fill-question-card:disabled .fill-choice:hover {
+  background: transparent;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .fill-choice {
+    transition: none;
+  }
+}
+
+@media (max-width: 640px) {
+  .fill-question-card {
+    padding: 28px 20px 22px;
+  }
+
+  .fill-date-input {
+    max-width: none;
+  }
+}

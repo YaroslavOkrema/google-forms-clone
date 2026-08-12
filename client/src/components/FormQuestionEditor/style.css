@@ -1,0 +1,119 @@
+.builder-question-card {
+  position: relative;
+  padding: 28px;
+  border: 1px solid #dadce0;
+  border-radius: 10px;
+  overflow: hidden;
+  background: #ffffff;
+  box-shadow: 0 1px 3px rgb(60 64 67 / 15%);
+}
+
+.builder-question-card::before {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 5px;
+  background: #7e57c2;
+  content: '';
+}
+
+.builder-question-heading,
+.builder-options-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.builder-question-heading {
+  margin-bottom: 20px;
+}
+
+.builder-question-heading p {
+  margin: 0;
+  color: #5f6368;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.builder-delete-button {
+  min-height: 36px;
+  padding: 7px 11px;
+  color: #b3261e;
+}
+
+.builder-delete-button:hover:not(:disabled) {
+  background: #fff2f0;
+  color: #a50e0e;
+}
+
+.builder-question-fields {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(190px, 0.42fr);
+  gap: 18px;
+}
+
+.builder-question-fields .builder-field + .builder-field {
+  margin-top: 0;
+}
+
+.builder-select {
+  appearance: auto;
+  cursor: pointer;
+}
+
+.builder-options {
+  padding-top: 24px;
+  border-top: 1px solid #e8eaed;
+  margin-top: 24px;
+}
+
+.builder-options-heading h3 {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.builder-small-button {
+  min-height: 36px;
+  padding: 7px 12px;
+  font-size: 0.88rem;
+}
+
+.builder-option-list-error {
+  margin-top: 12px;
+}
+
+.builder-options-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin: 16px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+@media (max-width: 640px) {
+  .builder-question-card {
+    padding: 22px 20px;
+  }
+
+  .builder-question-fields {
+    grid-template-columns: 1fr;
+  }
+
+  .builder-question-fields .builder-field + .builder-field {
+    margin-top: 4px;
+  }
+
+  .builder-options-heading {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .builder-small-button {
+    width: 100%;
+  }
+}

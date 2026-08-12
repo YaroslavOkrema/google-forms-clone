@@ -4,6 +4,8 @@ import { FormQuestionField } from 'src/components/FormQuestionField';
 import { ROUTE_PATHS } from 'src/navigation/paths';
 import { useFillFormPage } from 'src/pages/FillFormPage/useFillFormPage';
 
+import './style.css';
+
 export function FillFormPage() {
   const {
     answers,

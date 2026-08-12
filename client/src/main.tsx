@@ -2,9 +2,9 @@ import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
 import { Provider } from 'react-redux';
 
+import 'src/styles.css';
 import { App } from 'src/App';
 import { store } from 'src/stores/store';
-import 'src/styles.css';
 
 const rootElement = document.getElementById('root');
 

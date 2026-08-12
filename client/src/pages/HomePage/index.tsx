@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom';
 import { ROUTE_PATHS } from 'src/navigation/paths';
 import { useHomePage } from 'src/pages/HomePage/useHomePage';
 
+import './style.css';
+
 export function HomePage() {
   const { errorMessage, forms, isEmpty, isLoading, retry } = useHomePage();
 

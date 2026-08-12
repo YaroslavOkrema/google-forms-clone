@@ -1,5 +1,7 @@
 import type { QuestionOptionRowProps } from 'src/components/QuestionOptionRow/types';
 
+import './style.css';
+
 export function QuestionOptionRow({
   disabled,
   error,

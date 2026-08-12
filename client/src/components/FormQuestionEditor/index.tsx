@@ -5,6 +5,8 @@ import type { FormQuestionEditorProps } from 'src/components/FormQuestionEditor/
 import { QuestionOptionRow } from 'src/components/QuestionOptionRow';
 import { isChoiceQuestionType } from 'src/utils/questionTypes';
 
+import './style.css';
+
 export function FormQuestionEditor({
   disabled,
   errors,

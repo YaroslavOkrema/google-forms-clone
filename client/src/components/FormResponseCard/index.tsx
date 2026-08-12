@@ -1,5 +1,7 @@
 import type { FormResponseCardProps } from 'src/components/FormResponseCard/types';
 
+import './style.css';
+
 export function FormResponseCard({ response }: FormResponseCardProps) {
   const headingId = `response-${response.id}-heading`;
 

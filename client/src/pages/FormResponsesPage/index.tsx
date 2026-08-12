@@ -4,6 +4,8 @@ import { FormResponseCard } from 'src/components/FormResponseCard';
 import { ROUTE_PATHS } from 'src/navigation/paths';
 import { useFormResponsesPage } from 'src/pages/FormResponsesPage/useFormResponsesPage';
 
+import './style.css';
+
 export function FormResponsesPage() {
   const {
     errorMessage,
