@@ -20,12 +20,13 @@ npm creates a single root lockfile and links the local workspaces automatically.
 ## Workspaces
 
 ```text
-client/  React, TypeScript and Vite application
+client/  React, TypeScript, Redux Toolkit, RTK Query and React Router application
 server/  Node.js and TypeScript HTTP server prepared for Apollo GraphQL
 shared/  Shared and generated TypeScript types for client and server
 ```
 
-The GraphQL schema, Redux, routes, pages and business logic are intentionally not implemented yet.
+The client currently provides the typed API, state and routing foundation. The
+feature pages intentionally remain placeholders until their dedicated stages.
 
 ## Development
 
@@ -36,9 +37,11 @@ npm run dev
 ```
 
 - Client: `http://localhost:5173`
-- Server health check: `http://localhost:4000/health`
+- GraphQL API: `http://localhost:4000/graphql`
 
 The server port can be changed with the `PORT` environment variable.
+The client uses the GraphQL URL above by default. Set `VITE_GRAPHQL_URL` in a
+client environment file when the API is hosted elsewhere.
 
 ## Validation
 

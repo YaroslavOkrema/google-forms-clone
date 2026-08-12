@@ -20,5 +20,8 @@
     "build": "tsc",
     "lint": "eslint . --max-warnings=0",
     "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@graphql-typed-document-node/core": "^3.2.0"
   }
 }
