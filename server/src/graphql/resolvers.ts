@@ -1,8 +1,11 @@
 import type { Resolvers } from '@google-forms/shared';
 import { GraphQLError } from 'graphql';
 
-import type { FormsRepository } from './formsRepository.js';
-import { validateAnswers, validateQuestions } from './validation.js';
+import type { FormsRepository } from '../repositories/formsRepository.js';
+import {
+  validateAnswers,
+  validateQuestions,
+} from '../validation/validation.js';
 
 const NOT_FOUND = 'NOT_FOUND';
 

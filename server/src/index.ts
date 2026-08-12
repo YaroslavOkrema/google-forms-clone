@@ -1,9 +1,9 @@
 import { ApolloServer } from '@apollo/server';
 import { startStandaloneServer } from '@apollo/server/standalone';
 
-import { InMemoryFormsRepository } from './formsRepository.js';
-import { createResolvers } from './resolvers.js';
-import { typeDefs } from './schema.js';
+import { createResolvers } from './graphql/resolvers.js';
+import { typeDefs } from './graphql/schema.js';
+import { InMemoryFormsRepository } from './repositories/formsRepository.js';
 
 const DEFAULT_PORT = 4000;
 const port = Number(process.env.PORT ?? DEFAULT_PORT);
