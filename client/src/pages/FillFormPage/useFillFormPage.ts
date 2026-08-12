@@ -2,14 +2,17 @@ import { useRef, useState } from 'react';
 import type { FormEventHandler } from 'react';
 import { useParams } from 'react-router-dom';
 
-import { useFormQuery, useSubmitResponseMutation } from '../../api/formsApi';
-import { getApiErrorMessage } from '../../utils/apiErrors';
-import { prepareAnswerInputs } from './helpers';
-import type { AnswersState, UseFillFormPageResult } from './types';
-
-const LOAD_ERROR_FALLBACK = 'Unable to load this form. Please try again.';
-const SUBMIT_ERROR_FALLBACK =
-  'Unable to submit your response. Please try again.';
+import { useFormQuery, useSubmitResponseMutation } from 'src/api/formsApi';
+import {
+  LOAD_ERROR_FALLBACK,
+  SUBMIT_ERROR_FALLBACK,
+} from 'src/pages/FillFormPage/constants';
+import { prepareAnswerInputs } from 'src/pages/FillFormPage/helpers';
+import type {
+  AnswersState,
+  UseFillFormPageResult,
+} from 'src/pages/FillFormPage/types';
+import { getApiErrorMessage } from 'src/utils/apiErrors';
 
 export const useFillFormPage = (): UseFillFormPageResult => {
   const { id } = useParams<{ id: string }>();

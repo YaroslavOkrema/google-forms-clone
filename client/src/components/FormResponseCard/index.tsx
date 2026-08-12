@@ -1,4 +1,4 @@
-import type { FormResponseCardProps } from './types';
+import type { FormResponseCardProps } from 'src/components/FormResponseCard/types';
 
 export function FormResponseCard({ response }: FormResponseCardProps) {
   const headingId = `response-${response.id}-heading`;

@@ -1,9 +1,9 @@
 import type { QuestionType } from '@google-forms/shared';
 
-import { isChoiceQuestionType } from '../../utils/questionTypes';
-import { QuestionOptionRow } from '../QuestionOptionRow';
-import { QUESTION_TYPE_OPTIONS } from './constants';
-import type { FormQuestionEditorProps } from './types';
+import { QUESTION_TYPE_OPTIONS } from 'src/components/FormQuestionEditor/constants';
+import type { FormQuestionEditorProps } from 'src/components/FormQuestionEditor/types';
+import { QuestionOptionRow } from 'src/components/QuestionOptionRow';
+import { isChoiceQuestionType } from 'src/utils/questionTypes';
 
 export function FormQuestionEditor({
   disabled,

@@ -7,17 +7,16 @@ import {
 import type {
   FormResponseCardData,
   ResponseAnswerView,
-} from '../../components/FormResponseCard/types';
+} from 'src/components/FormResponseCard/types';
+import {
+  DATE_FORMATTER,
+  ISO_DATE_PATTERN,
+  UNKNOWN_QUESTION_TITLE,
+} from 'src/pages/FormResponsesPage/constants';
 
 type ResponsesForm = NonNullable<FormQuery['form']>;
 type FormQuestion = ResponsesForm['questions'][number];
 type FormResponse = ResponsesQuery['responses'][number];
-
-const UNKNOWN_QUESTION_TITLE = 'Question unavailable';
-const ISO_DATE_PATTERN = /^(\d{4})-(\d{2})-(\d{2})$/;
-const dateFormatter = new Intl.DateTimeFormat('en-US', {
-  dateStyle: 'long',
-});
 
 const formatDateValue = (value: string): string => {
   const match = ISO_DATE_PATTERN.exec(value);
@@ -40,7 +39,7 @@ const formatDateValue = (value: string): string => {
     return value;
   }
 
-  return dateFormatter.format(date);
+  return DATE_FORMATTER.format(date);
 };
 
 const prepareAnswer = (

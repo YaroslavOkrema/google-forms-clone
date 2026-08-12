@@ -3,7 +3,7 @@ import type { QuestionType } from '@google-forms/shared';
 import type {
   BuilderQuestion,
   BuilderQuestionValidationErrors,
-} from '../../types/formBuilder';
+} from 'src/types/formBuilder';
 
 export interface FormQuestionEditorProps {
   disabled: boolean;

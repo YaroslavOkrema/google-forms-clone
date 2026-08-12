@@ -4,7 +4,7 @@ import type { QuestionType } from '@google-forms/shared';
 import type {
   BuilderQuestion,
   FormBuilderValidationErrors,
-} from '../../types/formBuilder';
+} from 'src/types/formBuilder';
 
 export interface UseNewFormPageResult {
   description: string;

@@ -5,8 +5,8 @@ import type {
   BuilderOption,
   BuilderQuestion,
   FormBuilderState,
-} from '../types/formBuilder';
-import { isChoiceQuestionType } from '../utils/questionTypes';
+} from 'src/types/formBuilder';
+import { isChoiceQuestionType } from 'src/utils/questionTypes';
 
 const createBuilderQuestion = (): BuilderQuestion => ({
   id: nanoid(),

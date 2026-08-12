@@ -1,7 +1,7 @@
 import { configureStore } from '@reduxjs/toolkit';
 
-import { formsApi } from '../api/formsApi';
-import { formBuilderReducer } from './formBuilderSlice';
+import { formsApi } from 'src/api/formsApi';
+import { formBuilderReducer } from 'src/stores/formBuilderSlice';
 
 export const store = configureStore({
   reducer: {

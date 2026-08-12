@@ -1,6 +1,6 @@
 import { QuestionType } from '@google-forms/shared';
 
-import type { FormQuestionFieldProps } from './types';
+import type { FormQuestionFieldProps } from 'src/components/FormQuestionField/types';
 
 export function FormQuestionField({
   disabled,

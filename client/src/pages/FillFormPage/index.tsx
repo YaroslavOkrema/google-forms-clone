@@ -1,8 +1,8 @@
 import { Link } from 'react-router-dom';
 
-import { FormQuestionField } from '../../components/FormQuestionField';
-import { ROUTE_PATHS } from '../../navigation/paths';
-import { useFillFormPage } from './useFillFormPage';
+import { FormQuestionField } from 'src/components/FormQuestionField';
+import { ROUTE_PATHS } from 'src/navigation/paths';
+import { useFillFormPage } from 'src/pages/FillFormPage/useFillFormPage';
 
 export function FillFormPage() {
   const {

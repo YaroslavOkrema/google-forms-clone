@@ -1,6 +1,6 @@
 import type { FormQuery } from '@google-forms/shared';
 
-import type { FormResponseCardData } from '../../components/FormResponseCard/types';
+import type { FormResponseCardData } from 'src/components/FormResponseCard/types';
 
 type ResponsesForm = NonNullable<FormQuery['form']>;
 

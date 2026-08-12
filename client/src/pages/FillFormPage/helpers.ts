@@ -1,6 +1,6 @@
 import { QuestionType, type AnswerInput } from '@google-forms/shared';
 
-import type { AnswersState, FillForm } from './types';
+import type { AnswersState, FillForm } from 'src/pages/FillFormPage/types';
 
 export const prepareAnswerInputs = (
   questions: FillForm['questions'],

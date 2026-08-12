@@ -1,6 +1,6 @@
 import type { BaseQueryFn } from '@reduxjs/toolkit/query';
 
-import { GRAPHQL_ENDPOINT } from './constants';
+import { GRAPHQL_ENDPOINT } from 'src/api/constants';
 
 interface GraphQLDocument {
   toString(): string;

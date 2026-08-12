@@ -1,8 +1,7 @@
-import { useFormsQuery } from '../../api/formsApi';
-import { prepareForms } from './helpers';
-import type { UseHomePageResult } from './types';
-
-const LOAD_ERROR_FALLBACK = 'Unable to load forms. Please try again.';
+import { useFormsQuery } from 'src/api/formsApi';
+import { LOAD_ERROR_FALLBACK } from 'src/pages/HomePage/constants';
+import { prepareForms } from 'src/pages/HomePage/helpers';
+import type { UseHomePageResult } from 'src/pages/HomePage/types';
 
 export const useHomePage = (): UseHomePageResult => {
   const { data, error, isError, isFetching, isLoading, refetch } =

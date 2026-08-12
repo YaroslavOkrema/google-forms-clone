@@ -1,11 +1,12 @@
 import { useParams } from 'react-router-dom';
 
-import { useFormQuery, useResponsesQuery } from '../../api/formsApi';
-import { formatResponseCount, prepareResponses } from './helpers';
-import type { UseFormResponsesPageResult } from './types';
-
-const LOAD_ERROR_FALLBACK =
-  'Unable to load this form and its responses. Please try again.';
+import { useFormQuery, useResponsesQuery } from 'src/api/formsApi';
+import { LOAD_ERROR_FALLBACK } from 'src/pages/FormResponsesPage/constants';
+import {
+  formatResponseCount,
+  prepareResponses,
+} from 'src/pages/FormResponsesPage/helpers';
+import type { UseFormResponsesPageResult } from 'src/pages/FormResponsesPage/types';
 
 const getLoadErrorMessage = (
   hasFormError: boolean,

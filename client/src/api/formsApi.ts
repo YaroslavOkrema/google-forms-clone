@@ -17,9 +17,8 @@ import {
 } from '@google-forms/shared';
 import { createApi } from '@reduxjs/toolkit/query/react';
 
-import { graphqlBaseQuery } from './graphqlBaseQuery';
-
-const FORM_LIST_TAG_ID = 'LIST';
+import { FORM_LIST_TAG_ID } from 'src/api/constants';
+import { graphqlBaseQuery } from 'src/api/graphqlBaseQuery';
 
 export const formsApi = createApi({
   reducerPath: 'formsApi',

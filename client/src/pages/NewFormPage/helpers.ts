@@ -7,15 +7,16 @@ import type {
   BuilderQuestionValidationErrors,
   FormBuilderState,
   FormBuilderValidationResult,
-} from '../../types/formBuilder';
-import { isChoiceQuestionType } from '../../utils/questionTypes';
-
-const REQUIRED_FORM_TITLE = 'Form title is required.';
-const REQUIRED_QUESTION_TITLE = 'Question title is required.';
-const REQUIRED_OPTION = 'Option text is required.';
-const REQUIRED_OPTION_LIST = 'Add at least one option.';
-const DUPLICATE_OPTION = 'Options must be unique.';
-const UNSUPPORTED_OPTIONS = 'This question type cannot have options.';
+} from 'src/types/formBuilder';
+import {
+  DUPLICATE_OPTION,
+  REQUIRED_FORM_TITLE,
+  REQUIRED_OPTION,
+  REQUIRED_OPTION_LIST,
+  REQUIRED_QUESTION_TITLE,
+  UNSUPPORTED_OPTIONS,
+} from 'src/pages/NewFormPage/constants';
+import { isChoiceQuestionType } from 'src/utils/questionTypes';
 
 export const validateFormBuilder = (
   state: FormBuilderState,

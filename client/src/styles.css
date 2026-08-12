@@ -856,7 +856,7 @@ a {
 .fill-question-card {
   position: relative;
   min-width: 0;
-  padding: 28px;
+  padding: 36px 28px 28px;
   border-radius: 10px;
   margin: 0;
   overflow: hidden;
@@ -873,9 +873,14 @@ a {
 }
 
 .fill-question-card legend {
+  float: left;
   width: 100%;
   padding: 0;
   margin: 0 0 22px;
+}
+
+.fill-question-card legend + * {
+  clear: both;
 }
 
 .fill-question-number,
@@ -1072,7 +1077,7 @@ a {
   }
 
   .fill-question-card {
-    padding: 22px 20px;
+    padding: 28px 20px 22px;
   }
 
   .fill-questions-heading {

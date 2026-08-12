@@ -3,8 +3,8 @@ import type { FormEventHandler } from 'react';
 import type { QuestionType } from '@google-forms/shared';
 import { useNavigate } from 'react-router-dom';
 
-import { useCreateFormMutation } from '../../api/formsApi';
-import { ROUTE_PATHS } from '../../navigation/paths';
+import { useCreateFormMutation } from 'src/api/formsApi';
+import { ROUTE_PATHS } from 'src/navigation/paths';
 import {
   builderReset,
   descriptionChanged,
@@ -16,13 +16,15 @@ import {
   questionTitleChanged,
   questionTypeChanged,
   titleChanged,
-} from '../../stores/formBuilderSlice';
-import { useAppDispatch, useAppSelector } from '../../stores/hooks';
-import { getApiErrorMessage } from '../../utils/apiErrors';
-import { prepareCreateFormVariables, validateFormBuilder } from './helpers';
-import type { UseNewFormPageResult } from './types';
-
-const SAVE_ERROR_FALLBACK = 'The form could not be saved. Please try again.';
+} from 'src/stores/formBuilderSlice';
+import { useAppDispatch, useAppSelector } from 'src/stores/hooks';
+import { SAVE_ERROR_FALLBACK } from 'src/pages/NewFormPage/constants';
+import {
+  prepareCreateFormVariables,
+  validateFormBuilder,
+} from 'src/pages/NewFormPage/helpers';
+import type { UseNewFormPageResult } from 'src/pages/NewFormPage/types';
+import { getApiErrorMessage } from 'src/utils/apiErrors';
 
 export const useNewFormPage = (): UseNewFormPageResult => {
   const dispatch = useAppDispatch();

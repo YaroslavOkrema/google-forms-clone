@@ -1,8 +1,8 @@
 import { Link } from 'react-router-dom';
 
-import { FormQuestionEditor } from '../../components/FormQuestionEditor';
-import { ROUTE_PATHS } from '../../navigation/paths';
-import { useNewFormPage } from './useNewFormPage';
+import { FormQuestionEditor } from 'src/components/FormQuestionEditor';
+import { ROUTE_PATHS } from 'src/navigation/paths';
+import { useNewFormPage } from 'src/pages/NewFormPage/useNewFormPage';
 
 export function NewFormPage() {
   const {

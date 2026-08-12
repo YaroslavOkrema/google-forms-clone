@@ -1,10 +1,10 @@
 import { createBrowserRouter } from 'react-router-dom';
 
-import { FillFormPage } from '../pages/FillFormPage';
-import { FormResponsesPage } from '../pages/FormResponsesPage';
-import { HomePage } from '../pages/HomePage';
-import { NewFormPage } from '../pages/NewFormPage';
-import { ROUTE_PATHS } from './paths';
+import { FillFormPage } from 'src/pages/FillFormPage';
+import { FormResponsesPage } from 'src/pages/FormResponsesPage';
+import { HomePage } from 'src/pages/HomePage';
+import { NewFormPage } from 'src/pages/NewFormPage';
+import { ROUTE_PATHS } from 'src/navigation/paths';
 
 export const router = createBrowserRouter([
   {

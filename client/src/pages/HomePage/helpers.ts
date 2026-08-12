@@ -1,10 +1,9 @@
 import type { FormsQuery } from '@google-forms/shared';
 import { generatePath } from 'react-router-dom';
 
-import { ROUTE_PATHS } from '../../navigation/paths';
-import type { HomePageForm } from './types';
-
-const DESCRIPTION_FALLBACK = 'No description provided.';
+import { ROUTE_PATHS } from 'src/navigation/paths';
+import { DESCRIPTION_FALLBACK } from 'src/pages/HomePage/constants';
+import type { HomePageForm } from 'src/pages/HomePage/types';
 
 const formatDescription = (description: string | null): string => {
   const trimmedDescription = description?.trim();

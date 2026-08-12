@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 
-import { ROUTE_PATHS } from '../../navigation/paths';
-import { useHomePage } from './useHomePage';
+import { ROUTE_PATHS } from 'src/navigation/paths';
+import { useHomePage } from 'src/pages/HomePage/useHomePage';
 
 export function HomePage() {
   const { errorMessage, forms, isEmpty, isLoading, retry } = useHomePage();

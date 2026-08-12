@@ -1,4 +1,4 @@
-import type { QuestionOptionRowProps } from './types';
+import type { QuestionOptionRowProps } from 'src/components/QuestionOptionRow/types';
 
 export function QuestionOptionRow({
   disabled,

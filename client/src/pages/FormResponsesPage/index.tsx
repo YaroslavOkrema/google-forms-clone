@@ -1,8 +1,8 @@
 import { Link } from 'react-router-dom';
 
-import { FormResponseCard } from '../../components/FormResponseCard';
-import { ROUTE_PATHS } from '../../navigation/paths';
-import { useFormResponsesPage } from './useFormResponsesPage';
+import { FormResponseCard } from 'src/components/FormResponseCard';
+import { ROUTE_PATHS } from 'src/navigation/paths';
+import { useFormResponsesPage } from 'src/pages/FormResponsesPage/useFormResponsesPage';
 
 export function FormResponsesPage() {
   const {
