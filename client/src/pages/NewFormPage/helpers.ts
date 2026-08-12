@@ -16,22 +16,6 @@ const REQUIRED_OPTION = 'Option text is required.';
 const REQUIRED_OPTION_LIST = 'Add at least one option.';
 const DUPLICATE_OPTION = 'Options must be unique.';
 const UNSUPPORTED_OPTIONS = 'This question type cannot have options.';
-const SAVE_ERROR_FALLBACK = 'The form could not be saved. Please try again.';
-
-const isRecord = (value: unknown): value is Record<string, unknown> =>
-  typeof value === 'object' && value !== null;
-
-export const getSaveErrorMessage = (error: unknown): string | null => {
-  if (!error) {
-    return null;
-  }
-
-  if (isRecord(error) && typeof error.message === 'string') {
-    return error.message;
-  }
-
-  return SAVE_ERROR_FALLBACK;
-};
 
 export const validateFormBuilder = (
   state: FormBuilderState,

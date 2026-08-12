@@ -18,12 +18,11 @@ import {
   titleChanged,
 } from '../../stores/formBuilderSlice';
 import { useAppDispatch, useAppSelector } from '../../stores/hooks';
-import {
-  getSaveErrorMessage,
-  prepareCreateFormVariables,
-  validateFormBuilder,
-} from './helpers';
+import { getApiErrorMessage } from '../../utils/apiErrors';
+import { prepareCreateFormVariables, validateFormBuilder } from './helpers';
 import type { UseNewFormPageResult } from './types';
+
+const SAVE_ERROR_FALLBACK = 'The form could not be saved. Please try again.';
 
 export const useNewFormPage = (): UseNewFormPageResult => {
   const dispatch = useAppDispatch();
@@ -113,7 +112,7 @@ export const useNewFormPage = (): UseNewFormPageResult => {
     hasValidationErrors: hasAttemptedSave && !validation.isValid,
     isSaving,
     questions: builder.questions,
-    saveErrorMessage: getSaveErrorMessage(error),
+    saveErrorMessage: getApiErrorMessage(error, SAVE_ERROR_FALLBACK),
     title: builder.title,
   };
 };

@@ -2,24 +2,6 @@ import { QuestionType, type AnswerInput } from '@google-forms/shared';
 
 import type { AnswersState, FillForm } from './types';
 
-const isRecord = (value: unknown): value is Record<string, unknown> =>
-  typeof value === 'object' && value !== null;
-
-export const getApiErrorMessage = (
-  error: unknown,
-  fallback: string,
-): string | null => {
-  if (!error) {
-    return null;
-  }
-
-  if (isRecord(error) && typeof error.message === 'string') {
-    return error.message;
-  }
-
-  return fallback;
-};
-
 export const prepareAnswerInputs = (
   questions: FillForm['questions'],
   answers: AnswersState,

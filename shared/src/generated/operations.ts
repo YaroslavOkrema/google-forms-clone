@@ -12,17 +12,7 @@ import type { DocumentTypeDecoration } from '@graphql-typed-document-node/core';
 export type FormsQueryVariables = Exact<{ [key: string]: never }>;
 
 export type FormsQuery = {
-  forms: Array<{
-    id: string;
-    title: string;
-    description: string | null;
-    questions: Array<{
-      id: string;
-      title: string;
-      type: SchemaTypes.QuestionType;
-      options: Array<string>;
-    }>;
-  }>;
+  forms: Array<{ id: string; title: string; description: string | null }>;
 };
 
 export type FormQueryVariables = Exact<{
@@ -115,12 +105,6 @@ export const FormsDocument = new TypedDocumentString(`
     id
     title
     description
-    questions {
-      id
-      title
-      type
-      options
-    }
   }
 }
     `) as unknown as TypedDocumentString<FormsQuery, FormsQueryVariables>;

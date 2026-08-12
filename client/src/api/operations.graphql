@@ -3,12 +3,6 @@ query Forms {
     id
     title
     description
-    questions {
-      id
-      title
-      type
-      options
-    }
   }
 }
 

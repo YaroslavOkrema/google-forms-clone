@@ -3,7 +3,8 @@ import type { FormEventHandler } from 'react';
 import { useParams } from 'react-router-dom';
 
 import { useFormQuery, useSubmitResponseMutation } from '../../api/formsApi';
-import { getApiErrorMessage, prepareAnswerInputs } from './helpers';
+import { getApiErrorMessage } from '../../utils/apiErrors';
+import { prepareAnswerInputs } from './helpers';
 import type { AnswersState, UseFillFormPageResult } from './types';
 
 const LOAD_ERROR_FALLBACK = 'Unable to load this form. Please try again.';
