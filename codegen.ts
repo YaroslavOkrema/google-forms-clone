@@ -4,7 +4,11 @@ const config: CodegenConfig = {
   schema: 'server/schema.graphql',
   generates: {
     'shared/src/generated/graphql.ts': {
-      plugins: ['typescript'],
+      plugins: ['typescript', 'typescript-resolvers'],
+      config: {
+        contextType: 'Record<PropertyKey, never>',
+        useTypeImports: true,
+      },
     },
   },
 };

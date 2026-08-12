@@ -18,6 +18,12 @@ export default tseslint.config(
     },
   },
   {
+    files: ['shared/src/generated/**/*.ts'],
+    rules: {
+      '@typescript-eslint/no-explicit-any': 'off',
+    },
+  },
+  {
     files: ['client/**/*.{ts,tsx}'],
     languageOptions: {
       globals: globals.browser,
