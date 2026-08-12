@@ -980,12 +980,6 @@ a {
   line-height: 1.5;
 }
 
-.fill-actions {
-  position: sticky;
-  bottom: 16px;
-  z-index: 1;
-}
-
 .fill-submit-button {
   min-width: 170px;
   gap: 9px;
@@ -1086,10 +1080,6 @@ a {
 
   .fill-date-input {
     max-width: none;
-  }
-
-  .fill-actions {
-    position: static;
   }
 
   .fill-submit-button,
