@@ -1,0 +1,29 @@
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+coverage/
+*.tsbuildinfo
+
+# Environment files
+.env
+.env.*
+!.env.example
+
+# Logs
+*.log
+npm-debug.log*
+
+# Tooling and editors
+.idea/
+.vscode/
+.eslintcache
+
+# Operating systems
+.DS_Store
+Thumbs.db
+
+AGENTS.md
+task.md
+/task.md
